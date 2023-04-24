@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
 
 import { Peca } from '../peca.model';
 import { PecaService } from '../peca.service';
@@ -13,7 +12,6 @@ import { PecaService } from '../peca.service';
 export class EditarPecaComponent {
 
   cod: string = ''
-	inscricao: Subscription | undefined
 	peca: Peca | undefined
 
   quantidade: number = 0
@@ -26,7 +24,7 @@ export class EditarPecaComponent {
   ) {  }
 
   ngOnInit(): void {
-    this.inscricao = this.route.params.subscribe( 
+    this.route.params.subscribe( 
 			(params) => {
 				this.cod = params['cod'];
 				this.peca = this.pecaService.getPeca(this.cod);

@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ListarPecasComponent } from './pecas/listar-pecas/listar-pecas.component';
 import { EditarPecaComponent } from './pecas/editar-peca/editar-peca.component';
 import { PecaService } from './pecas/peca.service';
+import { NovaPecaComponent } from './pecas/nova-peca/nova-peca.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarPecasComponent,
-    EditarPecaComponent
+    EditarPecaComponent,
+    NovaPecaComponent
   ],
   imports: [
     BrowserModule,
